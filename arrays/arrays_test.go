@@ -7,35 +7,44 @@ import (
 )
 
 /*
-TestReverseString
-input: [3]string{"one", "two", "three"}
-expected: [3]string{"three", "two", "one"}
-error: no
+TestReverseStrings_1
+input := []string{"one", "two", "three"}
+expected := []string{"three", "two", "one"}
 */
-func TestReverseString(t *testing.T) {
+func TestReverseStrings_1(t *testing.T) {
 	input := []string{"one", "two", "three"}
 	expected := []string{"three", "two", "one"}
-	actual, err := ReverseString(input)
-	if actual[0] != expected[0] && err == nil {
-		t.Error(formatErrorWithErr(input, fmt.Sprintf("%v", expected)+", err == <nil>", actual, err))
+	actual := ReverseStrings(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
 	}
 }
 
 /*
-TestReverseString_3
-input := [1]string{"one"}
-expected: [3]string{"three", "two", "one"}
-error: yes
+TestReverseStrings_2
+input := []string{"one"}
+expected := []string{"one"}
 */
-func TestReverseString_3(t *testing.T) {
+func TestReverseStrings_2(t *testing.T) {
 	input := []string{"one"}
 	expected := []string{"one"}
-	actual, err := ReverseString(input)
-	if actual[0] != expected[0] && err == nil {
-		t.Error(formatErrorWithErr(fmt.Sprintf("%v", input),
-			fmt.Sprintf("%v", expected)+", err == <nil>",
-			fmt.Sprintf("%v", actual),
-			fmt.Sprintf("%v", err)))
+	actual := ReverseStrings(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
+/*
+TestReverseStrings_3
+var input []string
+var expected []string
+*/
+func TestReverseStrings_3(t *testing.T) {
+	var input []string
+	var expected []string
+	actual := ReverseStrings(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
 	}
 }
 

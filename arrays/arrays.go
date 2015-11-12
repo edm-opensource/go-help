@@ -22,3 +22,21 @@ func RemoveDuplicateInts(slice []int) []int {
 
 	return slice
 }
+
+/*
+ReverseStrings reverses the order of items in a slice of strings
+*/
+func ReverseStrings(s []string) []string {
+	length := len(s) - 1
+	if length < 1 {
+		return s
+	}
+
+	var res []string
+
+	for i := length; i >= 0; i-- {
+		res = append(res, s[i])
+	}
+
+	return res
+}
