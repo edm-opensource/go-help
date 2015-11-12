@@ -49,6 +49,48 @@ func TestReverseStrings_3(t *testing.T) {
 }
 
 /*
+TestReverseInts_1
+input := []int{1, 2, 3}
+expected := []int{3, 2, 1}
+*/
+func TestReverseInts_1(t *testing.T) {
+	input := []int{1, 2, 3}
+	expected := []int{3, 2, 1}
+	actual := ReverseInts(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
+/*
+TestReverseInts_2
+input := []int{1}
+expected := []int{1}
+*/
+func TestReverseInts_2(t *testing.T) {
+	input := []int{1}
+	expected := []int{1}
+	actual := ReverseInts(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
+/*
+TestReverseInts_3
+var input []int
+var expected []int
+*/
+func TestReverseInts_3(t *testing.T) {
+	var input []int
+	var expected []int
+	actual := ReverseInts(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
+/*
 	TestRemoveDuplicates
 	input := []int{1, 1}
 	expected := []int{1}

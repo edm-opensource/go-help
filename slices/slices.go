@@ -40,3 +40,21 @@ func ReverseStrings(s []string) []string {
 
 	return res
 }
+
+/*
+ReverseInts reverses the order of items in a slice of ints
+*/
+func ReverseInts(s []int) []int {
+	length := len(s) - 1
+	if length < 1 {
+		return s
+	}
+
+	var res []int
+
+	for i := length; i >= 0; i-- {
+		res = append(res, s[i])
+	}
+
+	return res
+}
