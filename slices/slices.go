@@ -1,4 +1,4 @@
-package arrays
+package slices
 
 /*
 RemoveDuplicateInts finds and removes any duplicate values for a given int slice
