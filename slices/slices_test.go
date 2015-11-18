@@ -195,6 +195,22 @@ func TestRemoveAllInstancesOfStrings_1(t *testing.T) {
 }
 
 /*
+	TestRemoveDuplicatesFloat
+	input := []int{1.0, 1.0}
+	expected := []int{1.0}
+*/
+func TestRemoveDuplicatesFloat(t *testing.T) {
+	input := []float64{1.0, 1.0}
+	expected := []float64{1.0}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
+
+	}
+}
+
+/*
 	TestRemoveAllInstancesOfStrings_2
 	input := []string{"one", "\none", "two", "oone"}
 	input2 := []string{"one"}
@@ -208,6 +224,21 @@ func TestRemoveAllInstancesOfStrings_2(t *testing.T) {
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Error(formatErrorTwoInputs(input, input2, expected, actual))
+	}
+}
+
+/*
+	TestRemoveDuplicatesFloat_2
+	input := []float64{9.0, 1.1, 1.0, 1.0, 100, 100, 9.0, 9.0}
+	expected := []float64{9.0, 1.1, 1.0, 100}
+*/
+func TestRemoveDuplicatesFloat_2(t *testing.T) {
+	input := []float64{9.0, 1.1, 1.0, 1.0, 100, 100, 9.0, 9.0}
+	expected := []float64{9.0, 1.1, 1.0, 100}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
 	}
 }
 
@@ -229,6 +260,21 @@ func TestRemoveAllInstancesOfStrings_3(t *testing.T) {
 }
 
 /*
+	TestRemoveDuplicatesFloat_3
+	input := []float64{}
+	expected := []float64{}
+*/
+func TestRemoveDuplicatesFloat_3(t *testing.T) {
+	input := []float64{}
+	expected := []float64{}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
+	}
+}
+
+/*
 	TestRemoveAllInstancesOfInts_1
 	input := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
 	input2 := []int{2, 1}
@@ -246,6 +292,21 @@ func TestRemoveAllInstancesOfInts_1(t *testing.T) {
 }
 
 /*
+	TestRemoveDuplicatesFloat_4
+	input := []float64{-1, -100, -34.55, -100}
+	expected := []float64{-1, -100, -34.55}
+*/
+func TestRemoveDuplicatesFloat_4(t *testing.T) {
+	input := []float64{-1, -100, -34.55, -100}
+	expected := []float64{-1, -100, -34.55}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
+	}
+}
+
+/*
 	TestRemoveAllInstancesOfInts_2
 	input := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
 	input2 := []int{16}
@@ -259,6 +320,21 @@ func TestRemoveAllInstancesOfInts_2(t *testing.T) {
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Error(formatErrorTwoInputs(input, input2, expected, actual))
+	}
+}
+
+/*
+	TestRemoveDuplicatesString
+	input := []string{"Hello", "HELLO", "cat", "cat", "dog"}
+	expected := []string{"Hello", "HELLO", "cat", "dog"}
+*/
+func TestRemoveDuplicatesString(t *testing.T) {
+	input := []string{"Hello", "HELLO", "cat", "cat", "dog"}
+	expected := []string{"Hello", "HELLO", "cat", "dog"}
+	actual := RemoveDuplicateString(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
 	}
 }
 
@@ -309,6 +385,21 @@ func TestRemoveAllInstancesOfFloat64s_2(t *testing.T) {
 
 	if !reflect.DeepEqual(expected, actual) {
 		t.Error(formatErrorTwoInputs(input, input2, expected, actual))
+	}
+}
+
+/*
+	TestRemoveDuplicatesString_2
+	input := []string{"", "", "Hey65", "Hey65"}
+	expected := []string{"", "Hey65"}
+*/
+func TestRemoveDuplicatesString_2(t *testing.T) {
+	input := []string{"", "", "Hey65", "Hey65"}
+	expected := []string{"", "Hey65"}
+	actual := RemoveDuplicateString(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
 	}
 }
 
@@ -428,6 +519,21 @@ func TestContainsFloat64_2(t *testing.T) {
 
 	if actual != expected {
 		t.Error(formatErrorTwoInputs(input, input2, expected, actual))
+	}
+}
+
+/*
+	TestRemoveDuplicatesString_3
+	input := []string{"Hey"}
+	expected := []string{"Hey"}
+*/
+func TestRemoveDuplicatesString_3(t *testing.T) {
+	input := []string{"Hey"}
+	expected := []string{"Hey"}
+	actual := RemoveDuplicateString(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
 	}
 }
 
