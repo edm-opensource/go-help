@@ -91,6 +91,48 @@ func TestReverseInts_3(t *testing.T) {
 }
 
 /*
+TestReverseFloat64s_1
+input := []float64{1.123, 2.3, 3.12312}
+expected := []float64{3.12312, 2.3, 1.123}
+*/
+func TestReverseFloat64s_1(t *testing.T) {
+	input := []float64{1.123, 2.3, 3.12312}
+	expected := []float64{3.12312, 2.3, 1.123}
+	actual := ReverseFloat64s(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
+/*
+TestReverseFloat64s_2
+input := []float64{1.451}
+expected := []float64{1.451}
+*/
+func TestReverseFloat64s_2(t *testing.T) {
+	input := []float64{1.451}
+	expected := []float64{1.451}
+	actual := ReverseFloat64s(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
+/*
+TestReverseFloat64s_3
+var input []float64
+var expected []float64
+*/
+func TestReverseFloat64s_3(t *testing.T) {
+	var input []float64
+	var expected []float64
+	actual := ReverseFloat64s(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
+/*
 	TestRemoveDuplicates
 	input := []int{1, 1}
 	expected := []int{1}

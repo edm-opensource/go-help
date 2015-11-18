@@ -67,3 +67,21 @@ func ReverseInts(s []int) []int {
 
 	return res
 }
+
+/*
+ReverseFloat64s reverses the order of items in a slice of floats64s
+*/
+func ReverseFloat64s(s []float64) []float64 {
+	length := len(s) - 1
+	if length < 1 {
+		return s
+	}
+
+	var res []float64
+
+	for i := length; i >= 0; i-- {
+		res = append(res, s[i])
+	}
+
+	return res
+}
