@@ -4,23 +4,32 @@ package slices
 RemoveDuplicateInts finds and removes any duplicate values for a given int slice
 */
 func RemoveDuplicateInts(slice []int) []int {
-	lenSlice := len(slice)
+	duplicate := make(map[int]bool)
+	result := []int{}
 
-	if lenSlice < 2 {
-		return slice
-	}
-
-	for i := 0; i < lenSlice; i++ {
-		for j := i + 1; j < lenSlice; j++ {
-			if slice[i] == slice[j] {
-				slice = append(slice[:j], slice[j+1:]...)
-				lenSlice = len(slice)
-				j--
-			}
+	for v := range slice {
+		if !duplicate[slice[v]] {
+			duplicate[slice[v]] = true
+			result = append(result, slice[v])
 		}
 	}
+	return result
+}
 
-	return slice
+/*
+RemoveDuplicateFloat64 finds and removes any duplicate values for a given float64 slice
+*/
+func RemoveDuplicateFloat64(slice []float64) []float64 {
+	encountered := make(map[float64]bool)
+	result := []float64{}
+
+	for v := range slice {
+		if !encountered[slice[v]] {
+			encountered[slice[v]] = true
+			result = append(result, slice[v])
+		}
+	}
+	return result
 }
 
 /*

@@ -135,6 +135,66 @@ func TestRemoveDuplicates_3(t *testing.T) {
 	}
 }
 
+/*
+	TestRemoveDuplicates
+	input := []int{1.0, 1.0}
+	expected := []int{1.0}
+*/
+func TestRemoveDuplicatesFloat(t *testing.T) {
+	input := []float64{1.0, 1.0}
+	expected := []float64{1.0}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
+	}
+}
+
+/*
+	TestRemoveDuplicates_2
+	input := []int{9, 1, 1, 1, 100, 100, 9, 9}
+	expected := []int{9, 1, 100}
+*/
+func TestRemoveDuplicatesFloat_2(t *testing.T) {
+	input := []float64{9.0, 1.1, 1.0, 1.0, 100, 100, 9.0, 9.0}
+	expected := []float64{9.0, 1.1, 1.0, 100}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
+	}
+}
+
+/*
+	TestRemoveDuplicates_3
+	input := []int{}
+	expected := []int{}
+*/
+func TestRemoveDuplicatesFloat_3(t *testing.T) {
+	input := []float64{}
+	expected := []float64{}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
+	}
+}
+
+/*
+	TestRemoveDuplicates_3
+	input := []int{}
+	expected := []int{}
+*/
+func TestRemoveDuplicatesFloat_4(t *testing.T) {
+	input := []float64{-1, -100, -34.55, -100}
+	expected := []float64{-1, -100, -34.55}
+	actual := RemoveDuplicateFloat64(input)
+
+	if !reflect.DeepEqual(expected, actual) {
+		t.Error(formatError(fmt.Sprintf("%v", input), fmt.Sprintf("%v", expected), fmt.Sprintf("%v", actual)))
+	}
+}
+
 func formatError(input interface{}, expected interface{}, actual interface{}) string {
 	return fmt.Sprintf("\nInput:    %v\nExpected: %v\nActual:   %v\n", input, expected, actual)
 }
