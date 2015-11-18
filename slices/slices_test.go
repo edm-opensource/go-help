@@ -6,11 +6,6 @@ import (
 	"testing"
 )
 
-/*
-TestReverseStrings_1
-input := []string{"one", "two", "three"}
-expected := []string{"three", "two", "one"}
-*/
 func TestReverseStrings_1(t *testing.T) {
 	input := []string{"one", "two", "three"}
 	expected := []string{"three", "two", "one"}
@@ -20,11 +15,6 @@ func TestReverseStrings_1(t *testing.T) {
 	}
 }
 
-/*
-TestReverseStrings_2
-input := []string{"one"}
-expected := []string{"one"}
-*/
 func TestReverseStrings_2(t *testing.T) {
 	input := []string{"one"}
 	expected := []string{"one"}
@@ -34,11 +24,6 @@ func TestReverseStrings_2(t *testing.T) {
 	}
 }
 
-/*
-TestReverseStrings_3
-var input []string
-var expected []string
-*/
 func TestReverseStrings_3(t *testing.T) {
 	var input []string
 	var expected []string
@@ -48,11 +33,6 @@ func TestReverseStrings_3(t *testing.T) {
 	}
 }
 
-/*
-TestReverseInts_1
-input := []int{1, 2, 3}
-expected := []int{3, 2, 1}
-*/
 func TestReverseInts_1(t *testing.T) {
 	input := []int{1, 2, 3}
 	expected := []int{3, 2, 1}
@@ -62,11 +42,6 @@ func TestReverseInts_1(t *testing.T) {
 	}
 }
 
-/*
-TestReverseInts_2
-input := []int{1}
-expected := []int{1}
-*/
 func TestReverseInts_2(t *testing.T) {
 	input := []int{1}
 	expected := []int{1}
@@ -76,11 +51,6 @@ func TestReverseInts_2(t *testing.T) {
 	}
 }
 
-/*
-TestReverseInts_3
-var input []int
-var expected []int
-*/
 func TestReverseInts_3(t *testing.T) {
 	var input []int
 	var expected []int
@@ -90,11 +60,6 @@ func TestReverseInts_3(t *testing.T) {
 	}
 }
 
-/*
-TestReverseFloat64s_1
-input := []float64{1.123, 2.3, 3.12312}
-expected := []float64{3.12312, 2.3, 1.123}
-*/
 func TestReverseFloat64s_1(t *testing.T) {
 	input := []float64{1.123, 2.3, 3.12312}
 	expected := []float64{3.12312, 2.3, 1.123}
@@ -104,11 +69,6 @@ func TestReverseFloat64s_1(t *testing.T) {
 	}
 }
 
-/*
-TestReverseFloat64s_2
-input := []float64{1.451}
-expected := []float64{1.451}
-*/
 func TestReverseFloat64s_2(t *testing.T) {
 	input := []float64{1.451}
 	expected := []float64{1.451}
@@ -118,11 +78,6 @@ func TestReverseFloat64s_2(t *testing.T) {
 	}
 }
 
-/*
-TestReverseFloat64s_3
-var input []float64
-var expected []float64
-*/
 func TestReverseFloat64s_3(t *testing.T) {
 	var input []float64
 	var expected []float64
@@ -132,11 +87,6 @@ func TestReverseFloat64s_3(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicates
-	input := []int{1, 1}
-	expected := []int{1}
-*/
 func TestRemoveDuplicates(t *testing.T) {
 	input := []int{1, 1}
 	expected := []int{1}
@@ -147,11 +97,6 @@ func TestRemoveDuplicates(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicates_2
-	input := []int{9, 1, 1, 1, 100, 100, 9, 9}
-	expected := []int{9, 1, 100}
-*/
 func TestRemoveDuplicates_2(t *testing.T) {
 	input := []int{9, 1, 1, 1, 100, 100, 9, 9}
 	expected := []int{9, 1, 100}
@@ -162,11 +107,6 @@ func TestRemoveDuplicates_2(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicates_3
-	input := []int{}
-	expected := []int{}
-*/
 func TestRemoveDuplicates_3(t *testing.T) {
 	input := []int{}
 	expected := []int{}
@@ -177,12 +117,6 @@ func TestRemoveDuplicates_3(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfStrings_1
-	input := []string{"one", "one", "two", "oone"}
-	input2 := []string{"one"}
-	expected := []string{"two", "oone"}
-*/
 func TestRemoveAllInstancesOfStrings_1(t *testing.T) {
 	input := []string{"one", "one", "two", "oone"}
 	input2 := []string{"one"}
@@ -194,11 +128,6 @@ func TestRemoveAllInstancesOfStrings_1(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicatesFloat
-	input := []int{1.0, 1.0}
-	expected := []int{1.0}
-*/
 func TestRemoveDuplicatesFloat(t *testing.T) {
 	input := []float64{1.0, 1.0}
 	expected := []float64{1.0}
@@ -210,12 +139,6 @@ func TestRemoveDuplicatesFloat(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfStrings_2
-	input := []string{"one", "\none", "two", "oone"}
-	input2 := []string{"one"}
-	expected := []string{"\none", "two", "oone"}
-*/
 func TestRemoveAllInstancesOfStrings_2(t *testing.T) {
 	input := []string{"one", "\none", "two", "oone"}
 	input2 := []string{"one"}
@@ -227,11 +150,6 @@ func TestRemoveAllInstancesOfStrings_2(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicatesFloat_2
-	input := []float64{9.0, 1.1, 1.0, 1.0, 100, 100, 9.0, 9.0}
-	expected := []float64{9.0, 1.1, 1.0, 100}
-*/
 func TestRemoveDuplicatesFloat_2(t *testing.T) {
 	input := []float64{9.0, 1.1, 1.0, 1.0, 100, 100, 9.0, 9.0}
 	expected := []float64{9.0, 1.1, 1.0, 100}
@@ -242,12 +160,6 @@ func TestRemoveDuplicatesFloat_2(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfStrings_3
-	input := []string{"one", "one", "two", "oone"}
-	input2 := []string{""}
-	expected := []string{"one", "one", "two", "oone"}
-*/
 func TestRemoveAllInstancesOfStrings_3(t *testing.T) {
 	input := []string{"one", "one", "two", "oone"}
 	input2 := []string{""}
@@ -259,11 +171,6 @@ func TestRemoveAllInstancesOfStrings_3(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicatesFloat_3
-	input := []float64{}
-	expected := []float64{}
-*/
 func TestRemoveDuplicatesFloat_3(t *testing.T) {
 	input := []float64{}
 	expected := []float64{}
@@ -274,12 +181,6 @@ func TestRemoveDuplicatesFloat_3(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfInts_1
-	input := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
-	input2 := []int{2, 1}
-	expected := []int{3, 4, 6, 12}
-*/
 func TestRemoveAllInstancesOfInts_1(t *testing.T) {
 	input := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
 	input2 := []int{2, 1}
@@ -291,11 +192,6 @@ func TestRemoveAllInstancesOfInts_1(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicatesFloat_4
-	input := []float64{-1, -100, -34.55, -100}
-	expected := []float64{-1, -100, -34.55}
-*/
 func TestRemoveDuplicatesFloat_4(t *testing.T) {
 	input := []float64{-1, -100, -34.55, -100}
 	expected := []float64{-1, -100, -34.55}
@@ -306,12 +202,6 @@ func TestRemoveDuplicatesFloat_4(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfInts_2
-	input := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
-	input2 := []int{16}
-	expected := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
-*/
 func TestRemoveAllInstancesOfInts_2(t *testing.T) {
 	input := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
 	input2 := []int{16}
@@ -323,11 +213,6 @@ func TestRemoveAllInstancesOfInts_2(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicatesString
-	input := []string{"Hello", "HELLO", "cat", "cat", "dog"}
-	expected := []string{"Hello", "HELLO", "cat", "dog"}
-*/
 func TestRemoveDuplicatesString(t *testing.T) {
 	input := []string{"Hello", "HELLO", "cat", "cat", "dog"}
 	expected := []string{"Hello", "HELLO", "cat", "dog"}
@@ -338,12 +223,6 @@ func TestRemoveDuplicatesString(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfInts_3
-	input := []int{}
-	input2 := []int{}
-	expected: Length of 0
-*/
 func TestRemoveAllInstancesOfInts_3(t *testing.T) {
 	input := []int{}
 	input2 := []int{}
@@ -354,12 +233,6 @@ func TestRemoveAllInstancesOfInts_3(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfFloat64s
-	input := []int{1, 2, 3, 2, 2, 4, 2, 6, 12}
-	input2 := []int{2, 1}
-	expected := []int{3, 4, 6, 12}
-*/
 func TestRemoveAllInstancesOfFloat64s_1(t *testing.T) {
 	input := []float64{2, 2, 2}
 	input2 := []float64{2, 2}
@@ -371,12 +244,6 @@ func TestRemoveAllInstancesOfFloat64s_1(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfFloat64s_2
-	input := []float64{1.123, 2.53, 3.0000000000001, 3, 2, 4, 2, 6, 12}
-	input2 := []float64{3}
-	expected := []float64{1.123, 2.53, 3.0000000000001, 2, 4, 2, 6, 12}
-*/
 func TestRemoveAllInstancesOfFloat64s_2(t *testing.T) {
 	input := []float64{1.123, 2.53, 3.0000000000001, 3, 2, 4, 2, 6, 12}
 	input2 := []float64{3}
@@ -388,11 +255,6 @@ func TestRemoveAllInstancesOfFloat64s_2(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicatesString_2
-	input := []string{"", "", "Hey65", "Hey65"}
-	expected := []string{"", "Hey65"}
-*/
 func TestRemoveDuplicatesString_2(t *testing.T) {
 	input := []string{"", "", "Hey65", "Hey65"}
 	expected := []string{"", "Hey65"}
@@ -403,12 +265,6 @@ func TestRemoveDuplicatesString_2(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveAllInstancesOfFloat64s_3
-	input := []float64{1.123, 2.53, 3.0000000000001, 3, 2, 4, 2, 6, 12}
-	input2 := []float64{3}
-	expected := []float64{1.123, 2.53, 3.0000000000000, 2, 4, 2, 6, 12}
-*/
 func TestRemoveAllInstancesOfFloat64s_3(t *testing.T) {
 	input := []float64{1.123, 2.53, 3.0000000000000, 3, 2, 4, 2, 6, 12}
 	input2 := []float64{3}
@@ -420,12 +276,6 @@ func TestRemoveAllInstancesOfFloat64s_3(t *testing.T) {
 	}
 }
 
-/*
-	TestContainsString_1
-	input := []string{"one", "too", "tree"}
-	input2 := "too"
-	expected := true
-*/
 func TestContainsString_1(t *testing.T) {
 	input := []string{"one", "too", "tree"}
 	input2 := "too"
@@ -437,12 +287,6 @@ func TestContainsString_1(t *testing.T) {
 	}
 }
 
-/*
-	TestContainsString_2
-	input := []string{"one", "too", "tree"}
-	input2 := "two"
-	expected := false
-*/
 func TestContainsString_2(t *testing.T) {
 	input := []string{"one", "too", "tree"}
 	input2 := "two"
@@ -454,12 +298,6 @@ func TestContainsString_2(t *testing.T) {
 	}
 }
 
-/*
-	TestContainsInt_1
-	input := []int{1, 2, 6}
-	input2 := 1
-	expected := true
-*/
 func TestContainsInt_1(t *testing.T) {
 	input := []int{1, 2, 6}
 	input2 := 1
@@ -471,12 +309,6 @@ func TestContainsInt_1(t *testing.T) {
 	}
 }
 
-/*
-	TestContainsInt_2
-	input := []int{1, 2, 6}
-	input2 := 3
-	expected := false
-*/
 func TestContainsInt_2(t *testing.T) {
 	input := []int{1, 2, 6}
 	input2 := 3
@@ -488,12 +320,6 @@ func TestContainsInt_2(t *testing.T) {
 	}
 }
 
-/*
-	TestContainsFloat64_1
-	input := []float64{1.00000, 2, 6}
-	input2 := 1.0
-	expected := true
-*/
 func TestContainsFloat64_1(t *testing.T) {
 	input := []float64{1.00000, 2, 6}
 	input2 := 1.0
@@ -505,12 +331,6 @@ func TestContainsFloat64_1(t *testing.T) {
 	}
 }
 
-/*
-	TestContainsFloat64_2
-	input := []int{1.00000000001, 2, 6}
-	input2 := 1.0
-	expected := false
-*/
 func TestContainsFloat64_2(t *testing.T) {
 	input := []float64{1.00000000001, 2, 6}
 	input2 := 1.0
@@ -522,11 +342,6 @@ func TestContainsFloat64_2(t *testing.T) {
 	}
 }
 
-/*
-	TestRemoveDuplicatesString_3
-	input := []string{"Hey"}
-	expected := []string{"Hey"}
-*/
 func TestRemoveDuplicatesString_3(t *testing.T) {
 	input := []string{"Hey"}
 	expected := []string{"Hey"}
