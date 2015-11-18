@@ -1,6 +1,7 @@
 # go-help
 [![travis build](https://img.shields.io/travis/edm-opensource/go-help.svg)](https://travis-ci.org/edm-opensource/go-help)
 [![codecov coverage](https://img.shields.io/codecov/c/github/edm-opensource/go-help.svg)](https://codecov.io/github/edm-opensource/go-help)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/edm-opensource/go-help/master/LICENSE)
 
 A go helper library
 
