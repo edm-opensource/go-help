@@ -33,6 +33,22 @@ func RemoveDuplicateFloat64(slice []float64) []float64 {
 }
 
 /*
+RemoveDuplicateString finds and removes any duplicate values for a given string slice
+*/
+func RemoveDuplicateString(slice []string) []string {
+	encountered := make(map[string]bool)
+	result := []string{}
+
+	for v := range slice {
+		if !encountered[slice[v]] {
+			encountered[slice[v]] = true
+			result = append(result, slice[v])
+		}
+	}
+	return result
+}
+
+/*
 ReverseStrings reverses the order of items in a slice of strings
 */
 func ReverseStrings(s []string) []string {
