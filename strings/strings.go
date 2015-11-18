@@ -1,6 +1,10 @@
 package strings
 
-import "strings"
+import (
+	"strings"
+	"unicode"
+	"unicode/utf8"
+)
 
 var (
 	m0 = []string{"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"}
@@ -56,6 +60,15 @@ func DecodeRomanNumerals(s string) (int, bool) {
 TitleFirstWord bra skit va
 */
 func TitleFirstWord(s string) string {
-	res := strings.ToUpper(string([]rune(s)[0])) + s[1:]
+	i := 0
+	w := 0
+	for ; i < len(s); i += w {
+		r, width := utf8.DecodeRuneInString(s[i:])
+		w = width
+		if unicode.IsLetter(r) {
+			break
+		}
+	}
+	res := s[0:i] + strings.ToUpper(string([]rune(s)[i])) + s[i+w:]
 	return res
 }

@@ -58,12 +58,28 @@ func TestToRomanNumeralsInCorrect(t *testing.T) {
 }
 
 func TestTitleFirstWord_1(t *testing.T) {
-	if TitleFirstWord("hello world") != "Hello world" {
-		t.Error("hello world was not parsed sucessfully")
+	input := "hello world"
+	expected := "Hello world"
+	actual := TitleFirstWord(input)
+	if expected != actual {
+		t.Error(formatError(input, expected, actual))
 	}
 }
+
+func TestTitleFirstWord_3(t *testing.T) {
+	input := "12 äello world"
+	expected := "12 Äello world"
+	actual := TitleFirstWord(input)
+	if expected != actual {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+
 func TestTitleFirstWord_2(t *testing.T) {
-	if TitleFirstWord("Hello world") != "Hello world" {
-		t.Error("Hello world was not parsed sucessfully")
+	input := "Hello world"
+	expected := "Hello world"
+	actual := TitleFirstWord(input)
+	if expected != actual {
+		t.Error(formatError(input, expected, actual))
 	}
 }
