@@ -1,4 +1,4 @@
-package slices
+package gohelp
 
 /*
 RemoveDuplicateInts finds and removes any duplicate values for a given int slice

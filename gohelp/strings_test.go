@@ -1,14 +1,11 @@
-package strings
+package gohelp
 
-import (
-	"fmt"
-	"testing"
-)
+import "testing"
 
-func formatError(input interface{}, expected interface{}, actual interface{}) string {
-	//return "Input: " + input.(string) + "\nExpected: " + expected.(string) + "\nActual: " + actual.(string)
-	return fmt.Sprintf("\nInput:    %v\nExpected: %v\nActual:   %v", input, expected, actual)
-}
+// func formatError(input interface{}, expected interface{}, actual interface{}) string {
+// 	//return "Input: " + input.(string) + "\nExpected: " + expected.(string) + "\nActual: " + actual.(string)
+// 	return fmt.Sprintf("\nInput:    %v\nExpected: %v\nActual:   %v", input, expected, actual)
+// }
 
 type testpairRoman struct {
 	value int

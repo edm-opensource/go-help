@@ -1,6 +1,6 @@
-package integers
+package gohelp
 
-// BigMod function
+// ModPow function
 func ModPow(x int, y int, n int) int {
 	if y == 0 {
 		return 1
