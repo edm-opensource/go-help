@@ -12,13 +12,11 @@ Provides simple utilities that does not exist in the standard go libraries.
 To get the package, run:
 
     go get github.com/edm-opensource/go-help
-    
+
 # Usage
-There are three modules which are **strings**, **slices** and **integers**. 
+To use the go-help package just import it in your go file:
 
-To use the modules just import them in your go file:
-
-    import "github.com/edm-opensource/go-help/<module>"
+    import "github.com/edm-opensource/go-help/gohelp"
 
 # Features
 
