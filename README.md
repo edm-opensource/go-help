@@ -12,7 +12,7 @@ Provides simple utilities that does not exist in the standard go libraries.
 To get the package, run:
 
     go get github.com/edm-opensource/go-help
-    
+
 # Features
 
 ### Integers
@@ -41,8 +41,6 @@ To get the package, run:
 We encourage you to contribute with utilities that you think are missing from the standard libraries.
 
 Feel free to make pull requests, we will look at them as soon as possible.
-
-https://codecov.io/github/edm-opensource/go-help
 
 
 # License
