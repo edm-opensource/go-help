@@ -11,7 +11,7 @@ Provides simple utilities that does not exist in the standard go libraries.
 # Installation
 To get the package, run:
 
-    go get github.com/edm-opensource/go-help
+    go get github.com/edm-opensource/go-help/...
 
 # Usage
 To use the go-help package just import it in your go file:
