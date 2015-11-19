@@ -12,6 +12,13 @@ Provides simple utilities that does not exist in the standard go libraries.
 To get the package, run:
 
     go get github.com/edm-opensource/go-help
+    
+# Usage
+There are three modules which are **strings**, **slices** and **integers**. 
+
+To use the modules just import them in your go file:
+
+    import "github.com/edm-opensource/go-help/<module>"
 
 # Features
 
@@ -40,8 +47,7 @@ To get the package, run:
 # Contributing
 We encourage you to contribute with utilities that you think are missing from the standard libraries.
 
-Feel free to make pull requests, we will look at them as soon as possible.
-
+Feel free to make pull requests to our develop branch, and we will look at them as soon as possible.
 
 # License
 MIT
