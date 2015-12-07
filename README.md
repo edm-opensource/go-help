@@ -43,9 +43,61 @@ To use the go-help package just import it in your go file:
 * **TitleFirstWord:** Changes the first letter of the first word to uppercase
 
 # Contributing
-We encourage you to contribute with utilities that you think are missing from the standard libraries.
+Things we want you to contribute with:
+* **Utilities you think are missing from the standard libraries or this package**
+* **Issues regarding bugs or problems within out code**
+* **Solutions to existing issues**
+* **Feature requests**
 
-Feel free to make pull requests to our develop branch, and we will look at them as soon as possible.
+### To contribute with code:
+1. Fork this repository
+2. Write code
+3. Write tests, please
+4. Confirm tests pass
+5. Commit changes
+6. Push to your repository
+7. Make pull request to our develop-branch
+
+Use camelCase for variable names
+
+## File structure
+The file structure is straight forward.
+All go-files are in the go-help folder.
+Each method is placed in the appropriate file, ie. methods concerning slices are in slices.go
+Each file has a corresponding test-file where all methods must be tested.
+
+### Writing tests
+Please follow our way of writing tests in the appropriate files
+``` go
+func TestReverseStrings_1(t *testing.T) {
+	input := []string{"one", "two", "three"}
+	expected := []string{"three", "two", "one"}
+	actual := ReverseStrings(input)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error(formatError(input, expected, actual))
+	}
+}
+```
+
+The method formatError should always be used to print errors to ensure good readability in the console.
+
+### Running tets
+If you are using a Mac like us, you can add this method to your .bash_profile file:
+
+``` bash
+got(){
+go test github.com/edm-opensource/go-help/... 
+| sed ''/Expected/s//$(printf "\033[32mExpected\033[0m")/'' 
+| sed ''/Actual/s//$(printf "\033[31mActual\033[0m")/'' 
+| sed ''/FAIL/s//$(printf "\033[31mFAIL\033[0m")/'' 
+| sed ''/ok/s//$(printf "\033[32mok\033[0m")/'' 
+| sed ''/PASS/s//$(printf "\033[32mPass\033[0m")/''
+} 
+```
+
+This will give you colored and easy-to-read reports using the command ``` got() ``` in your terminal
+
+All contributions are welcome!
 
 # License
 MIT
